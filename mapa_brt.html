@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_127b3629b421381131ffadba0a47458c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_127b3629b421381131ffadba0a47458c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_127b3629b421381131ffadba0a47458c = L.map(
+                "map_127b3629b421381131ffadba0a47458c",
+                {
+                    center: [-22.908333, -43.196388],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ff92686d42d69e0c482a38e31c03fe0d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            var heat_map_ed51e25545b7e4497b917b6872c49d58 = L.heatLayer(
+                [[-23.00051, -43.33502], [-23.00037, -43.38976], [-23.00037, -43.38976], [-22.99992, -43.35983], [-22.99992, -43.35983], [-22.99995, -43.36121], [-23.0003, -43.37744], [-23.0033, -43.3239], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.88218, -43.34188], [-22.90768, -43.56407], [-22.90768, -43.56407], [-22.89288, -43.34859], [-22.89288, -43.34859], [-22.89288, -43.34859], [-22.97335, -43.36559], [-22.97335, -43.36559], [-22.97335, -43.36559], [-22.91597, -43.60776], [-23.0051, -43.55816], [-23.0051, -43.55816], [-23.0051, -43.55816], [-22.95979, -43.38867], [-22.95979, -43.38867], [-22.99958, -43.58227], [-22.99958, -43.58227], [-22.92747, -43.67756], [-22.92747, -43.67756], [-23.01214, -43.45843], [-23.01214, -43.45843], [-23.01214, -43.45843], [-23.0184, -43.48257], [-23.0184, -43.48257], [-23.00944, -43.53986], [-22.90467, -43.35702], [-22.90467, -43.35702], [-22.90467, -43.35702], [-22.90467, -43.35702], [-22.90467, -43.35702], [-22.8773, -43.33607], [-22.99412, -43.59611], [-22.99412, -43.59611], [-22.99412, -43.59611], [-22.8702, -43.335504], [-22.8702, -43.335504], [-22.93483, -43.37137], [-22.96677, -43.39701], [-23.02057, -43.50005], [-23.02057, -43.50005], [-22.98173, -43.4102], [-22.86575, -43.33427], [-22.86575, -43.33427], [-22.99994, -43.35247], [-22.97316, -43.39357], [-22.97316, -43.39357], [-22.97316, -43.39357], [-22.97316, -43.39357], [-22.83907, -43.28325], [-22.83907, -43.28325], [-22.83907, -43.28325], [-22.83907, -43.28325], [-23.00111, -43.32903], [-23.00279, -43.42361], [-22.96747, -43.39045], [-22.96747, -43.39045], [-22.96747, -43.39045], [-22.96747, -43.39045], [-22.96747, -43.39045], [-22.84127, -43.29843], [-22.84161, -43.2771], [-22.84193, -43.27633], [-22.84193, -43.27633], [-22.84193, -43.27633], [-22.84193, -43.27633], [-22.9075, -43.57571], [-22.88836, -43.34588], [-22.88836, -43.34588], [-22.88836, -43.34588], [-22.88836, -43.34588], [-22.88836, -43.34588], [-23.00542, -23.00542], [-23.00542, -23.00542], [-23.00542, -23.00542], [-22.83876, -43.29496], [-22.83876, -43.29496], [-22.89812, -43.35253], [-22.94825, -43.37239], [-22.94825, -43.37239], [-22.94825, -43.37239], [-22.97315, -43.37662], [-22.97315, -43.37662], [-22.97315, -43.37662], [-22.97315, -43.37662], [-22.97315, -43.37662], [-22.97324, -43.38214], [-22.97324, -43.38214], [-22.97324, -43.38214], [-23.00022, -43.34186], [-23.00803, -43.44238], [-22.93449, -43.665], [-22.93449, -43.665], [-22.93449, -43.665], [-22.91678, -43.63276], [-22.91536, -43.36111], [-23.00006, -43.42965], [-22.92362, -43.37358], [-22.92362, -43.37358], [-22.92362, -43.37358], [-22.92362, -43.37358], [-22.92362, -43.37358], [-22.97165, -43.4005], [-22.97165, -43.4005], [-22.925483, -43.64996], [-22.925483, -43.64996], [-22.85642, -43.32802], [-22.85642, -43.32802], [-22.85642, -43.32802], [-22.85642, -43.32802], [-22.85287, -43.31301], [-22.85287, -43.31301], [-22.85287, -43.31301], [-22.85287, -43.31301], [-22.85287, -43.31301], [-22.84965, -43.30795], [-22.9284, -43.65384], [-22.9284, -43.65384], [-22.86136, -43.33016], [-22.952153, -43.37448]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            var circle_ab012d41c354caea16ab73298718a3c4 = L.circle(
+                [-23.00051, -43.33502],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ab012d41c354caea16ab73298718a3c4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: AFRÂNIO COSTA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a59bfc6e774af9e8495ce336cd68c409 = L.circle(
+                [-23.00037, -43.38976],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a59bfc6e774af9e8495ce336cd68c409.bindTooltip(
+                `<div>
+                     <li><bold> Estação: AMÉRICAS PARK<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_51f03a69f3ed259df1ca4af9b402aee4 = L.circle(
+                [-22.99992, -43.35983],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_51f03a69f3ed259df1ca4af9b402aee4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BARRA SHOPPING - EXPRESSO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_97a2883f1268d51bd118dba9be4ff67a = L.circle(
+                [-22.99995, -43.36121],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_97a2883f1268d51bd118dba9be4ff67a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BARRA SHOPPING - PARADOR<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e3b6d2fc170107c1ee62748753709a50 = L.circle(
+                [-23.0003, -43.37744],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e3b6d2fc170107c1ee62748753709a50.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BOSQUE DA BARRA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_32e3567c6e134257017736de9db3354d = L.circle(
+                [-23.0033, -43.3239],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_32e3567c6e134257017736de9db3354d.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BOSQUE MARAPENDI<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6e1731d292486ca319d636b9cf05514f = L.circle(
+                [-22.88218, -43.34188],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6e1731d292486ca319d636b9cf05514f.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CAMPINHO<li><bold> total: 7<li><bold> avanço:2.0<li><bold> conversão:3.0<li><bold> invasão:2.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_27be14097162676e03d697e1d6d8be24 = L.circle(
+                [-22.90768, -43.56407],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_27be14097162676e03d697e1d6d8be24.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CÂNDIDO MAGALHÃES<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f641b5da5fc61c6e5a6d9867844073b3 = L.circle(
+                [-22.89288, -43.34859],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f641b5da5fc61c6e5a6d9867844073b3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CAPITÃO MENEZES<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ab42031136470b52e79d869d0b9fe418 = L.circle(
+                [-22.97335, -43.36559],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ab42031136470b52e79d869d0b9fe418.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CENTRO METROPOLITANO<li><bold> total: 3<li><bold> avanço:0.0<li><bold> conversão:3.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_17434edab3f9dd4681c78289a712e277 = L.circle(
+                [-22.93345, -43.66202],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_17434edab3f9dd4681c78289a712e277.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CESARÃO II<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3c82af06066673d4359f703904dfabb8 = L.circle(
+                [-22.91597, -43.60776],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_3c82af06066673d4359f703904dfabb8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: COSMOS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_94f9857e2d25e0a50c2816470db9cade = L.circle(
+                [-23.0051, -43.55816],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_94f9857e2d25e0a50c2816470db9cade.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CTEX<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_230b08372f7be16d278961f598f7aa4b = L.circle(
+                [-22.95979, -43.38867],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_230b08372f7be16d278961f598f7aa4b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CURICICA<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0b5b1d92cfe1795d127e5e8ee51700cc = L.circle(
+                [-22.9365, -43.66683],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_0b5b1d92cfe1795d127e5e8ee51700cc.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CURRAL FALSO<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_dc050cdaf1c10f66b7e9f463018d3af2 = L.circle(
+                [-22.94056, -43.37241],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_dc050cdaf1c10f66b7e9f463018d3af2.bindTooltip(
+                `<div>
+                     <li><bold> Estação: DIVINA PROVIDÊNCIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fc85d4de95c04354fffa91fcc3e48435 = L.circle(
+                [-22.99958, -43.58227],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_fc85d4de95c04354fffa91fcc3e48435.bindTooltip(
+                `<div>
+                     <li><bold> Estação: EMBRAPA<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1d3f3d8c87a05fbe7a120c6fa85e4a80 = L.circle(
+                [-22.92747, -43.67756],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_1d3f3d8c87a05fbe7a120c6fa85e4a80.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GASTÃO RANGEL<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_bf42269703aa1cfdd99fb47cad7b9faa = L.circle(
+                [-23.00962, -43.44867],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_bf42269703aa1cfdd99fb47cad7b9faa.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GELSON FONSECA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9dbd23fbc3a1ed9979316d02323bb812 = L.circle(
+                [-23.01214, -43.45843],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_9dbd23fbc3a1ed9979316d02323bb812.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GLÁUCIO GIL<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_52922196eaac59300484348dd9550a60 = L.circle(
+                [-23.0184, -43.48257],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_52922196eaac59300484348dd9550a60.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GUIOMAR NOVAES<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5b1cb914e4eeddc9b52c772f291eba7b = L.circle(
+                [-23.00944, -43.53986],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_5b1cb914e4eeddc9b52c772f291eba7b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: ILHA DE GUARATIBA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a74845954d84cca72732e5bc61a5d496 = L.circle(
+                [-22.90467, -43.35702],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a74845954d84cca72732e5bc61a5d496.bindTooltip(
+                `<div>
+                     <li><bold> Estação: IPASE<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0297f7ac396e85f2251253f4c0224c4e = L.circle(
+                [-22.8773, -43.33607],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_0297f7ac396e85f2251253f4c0224c4e.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MADUREIRA - MANACÉIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_64941b43dfcd561b6a4fb7b3609dab46 = L.circle(
+                [-22.96846, -43.6218],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_64941b43dfcd561b6a4fb7b3609dab46.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MAGARÇA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d2eb2d1538ca887619f55f6d3c5637b3 = L.circle(
+                [-22.84154, -43.32335],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_d2eb2d1538ca887619f55f6d3c5637b3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MARAMBAIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6c670ebb64d146fb93faace2a84593c5 = L.circle(
+                [-22.84682, -43.24316],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6c670ebb64d146fb93faace2a84593c5.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MARÉ<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cd360e1b5fec8a737adfb0a410687bf3 = L.circle(
+                [-22.99412, -43.59611],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_cd360e1b5fec8a737adfb0a410687bf3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MATO ALTO<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_842110e309cf77f556dac807d3c2a381 = L.circle(
+                [-22.8702, -43.335504],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_842110e309cf77f556dac807d3c2a381.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MERCADÃO<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f38917803650c85893d08cb8af9aa921 = L.circle(
+                [-22.93483, -43.37137],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f38917803650c85893d08cb8af9aa921.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MERCK<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_966ca763bc6759e8e671d1ec4871cb98 = L.circle(
+                [-22.96677, -43.39701],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_966ca763bc6759e8e671d1ec4871cb98.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MINHA PRAIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_02d2a75ead3204006bea258e63d393c8 = L.circle(
+                [-23.02057, -43.50005],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_02d2a75ead3204006bea258e63d393c8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: NOTRE DAME<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f5d4ac9e0efe4cf7b1c781e7f4bd8d88 = L.circle(
+                [-22.84841, -43.26507],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f5d4ac9e0efe4cf7b1c781e7f4bd8d88.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OLARIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3ff652d037e0c89d3a09b992bf7c78e4 = L.circle(
+                [-22.98173, -43.4102],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_3ff652d037e0c89d3a09b992bf7c78e4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OLOF PALME<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6308297d26679a92464994e6ba0db41a = L.circle(
+                [-22.86575, -43.33427],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6308297d26679a92464994e6ba0db41a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OTAVIANO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a368a9361b1a3b0d4a6705487fc56ded = L.circle(
+                [-22.99994, -43.35247],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a368a9361b1a3b0d4a6705487fc56ded.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PARQUE DAS ROSAS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a6c519736af6e73ebfbb4fec0664c47f = L.circle(
+                [-22.97316, -43.39357],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a6c519736af6e73ebfbb4fec0664c47f.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PARQUE OLÍMPICO<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_022dee116f41fe193c020cdf032048eb = L.circle(
+                [-22.83907, -43.28325],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_022dee116f41fe193c020cdf032048eb.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PASTOR JOSÉ SANTOS<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c054b23e6da6dd6f8a23a0e5cd15a9f5 = L.circle(
+                [-23.00111, -43.32903],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c054b23e6da6dd6f8a23a0e5cd15a9f5.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PAULO MALTA REZENDE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e71fa96f3b68add3680e93013421593c = L.circle(
+                [-23.00279, -43.42361],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e71fa96f3b68add3680e93013421593c.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRA DE ITAÚNA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a0d48e1add17810499735a778b6140e0 = L.circle(
+                [-22.96747, -43.39045],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a0d48e1add17810499735a778b6140e0.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRO CORREIA<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7639db6d8af53aed285233d249d362fd = L.circle(
+                [-22.84127, -43.29843],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_7639db6d8af53aed285233d249d362fd.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRO TAQUES<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_00d763d9067c5be122b80e5e0debe6a5 = L.circle(
+                [-22.84161, -43.2771],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_00d763d9067c5be122b80e5e0debe6a5.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PENHA 1<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d540b2a2420ddf00da38c077fbf2c319 = L.circle(
+                [-22.84193, -43.27633],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_d540b2a2420ddf00da38c077fbf2c319.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PENHA 2<li><bold> total: 4<li><bold> avanço:0.0<li><bold> conversão:4.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_92bd40c176c887bb08c86b3ef6eef739 = L.circle(
+                [-22.9075, -43.57571],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_92bd40c176c887bb08c86b3ef6eef739.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINA RANGEL<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_35f579cd4b78932b3c02ae38465e0ba1 = L.circle(
+                [-22.96468, -43.64737],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_35f579cd4b78932b3c02ae38465e0ba1.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINGO D'ÁGUA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d4dd5eff706e68cd20a535935e4b87b4 = L.circle(
+                [-22.88836, -43.34588],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_d4dd5eff706e68cd20a535935e4b87b4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINTO TELES<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_42da99c57e61d21eea3beb2192ef1e64 = L.circle(
+                [-23.00542, -23.00542],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_42da99c57e61d21eea3beb2192ef1e64.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PONTÕES - BARRA SUL<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_21fcadf02987bf6d49845b77d1f5043e = L.circle(
+                [-22.9586, -43.38343],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_21fcadf02987bf6d49845b77d1f5043e.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA DO BANDOLIM<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a96055b91b4635a400573897ec472b58 = L.circle(
+                [-22.83876, -43.29496],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a96055b91b4635a400573897ec472b58.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA DO CARMO<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_83e178f09d39daa69f366009e67a8c07 = L.circle(
+                [-22.89812, -43.35253],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_83e178f09d39daa69f366009e67a8c07.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA SECA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_39b7acda7e08360b6442d0cfd43540ef = L.circle(
+                [-22.94825, -43.37239],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_39b7acda7e08360b6442d0cfd43540ef.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RECANTO DAS PALMEIRAS<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_dd79b5b906d37b98a561e2bfc32e725d = L.circle(
+                [-22.97315, -43.37662],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_dd79b5b906d37b98a561e2bfc32e725d.bindTooltip(
+                `<div>
+                     <li><bold> Estação: REDE SARAH<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8511808f875c4145999b31724e5a4fa8 = L.circle(
+                [-22.97324, -43.38214],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_8511808f875c4145999b31724e5a4fa8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RIO 2<li><bold> total: 3<li><bold> avanço:0.0<li><bold> conversão:3.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_396d27a06951e1c34611e7b9efc5b788 = L.circle(
+                [-23.00022, -43.34186],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_396d27a06951e1c34611e7b9efc5b788.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RIVIERA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b862b03704e955f831fb4b7297abc58b = L.circle(
+                [-23.00803, -43.44238],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_b862b03704e955f831fb4b7297abc58b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SALVADOR ALLENDE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c85427034bef4dc17d7281f98b649f14 = L.circle(
+                [-22.93449, -43.665],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c85427034bef4dc17d7281f98b649f14.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA CRUZ<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_577a13a3507cbc903a137ac1aa2f5582 = L.circle(
+                [-22.9365, -43.37175],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_577a13a3507cbc903a137ac1aa2f5582.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA EFIGÊNIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_07b07fc33b7c57ef369f30e63dbfc132 = L.circle(
+                [-22.91678, -43.63276],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_07b07fc33b7c57ef369f30e63dbfc132.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA EUGÊNIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8eff8fd1d5729eff88abc130563e26e2 = L.circle(
+                [-22.91536, -43.36111],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_8eff8fd1d5729eff88abc130563e26e2.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TANQUE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d849b4d35a10348e4470daad249aee95 = L.circle(
+                [-23.00006, -43.42965],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_d849b4d35a10348e4470daad249aee95.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TAPEBUIAS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cbcbf60305c19212bf1c8243d379c677 = L.circle(
+                [-22.92362, -43.37358],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_cbcbf60305c19212bf1c8243d379c677.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TAQUARA<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fd01c75857d6e2c341b3ef96bfb2358a = L.circle(
+                [-22.97165, -43.4005],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_fd01c75857d6e2c341b3ef96bfb2358a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL CENTRO OLÍMPICO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0be239d2097d7472d0edf51449c4eee8 = L.circle(
+                [-22.83916, -43.23939],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_0be239d2097d7472d0edf51449c4eee8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL FUNDÃO<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_392c8705cb4885dfccbc690f98593968 = L.circle(
+                [-22.87853, -43.33602],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_392c8705cb4885dfccbc690f98593968.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL MADUREIRA - PAULO DA PORTELA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5e39186858bdef87141de5ba330214a2 = L.circle(
+                [-22.925483, -43.64996],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_5e39186858bdef87141de5ba330214a2.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TRÊS PONTES<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f695bfa1b2b0e91a491822df5af19c0d = L.circle(
+                [-22.85642, -43.32802],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f695bfa1b2b0e91a491822df5af19c0d.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VAZ LOBO<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8e8cafbe264a81efd1458fab0fe041d4 = L.circle(
+                [-22.85287, -43.31301],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_8e8cafbe264a81efd1458fab0fe041d4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VICENTE DE CARVALHO<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_25085f9e40c389cf3936d3e12a540b13 = L.circle(
+                [-22.84965, -43.30795],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_25085f9e40c389cf3936d3e12a540b13.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA KOSMOS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ad85e778eb821eda7c0c5dcad87dfabf = L.circle(
+                [-22.9284, -43.65384],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ad85e778eb821eda7c0c5dcad87dfabf.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA PACIÊNCIA<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1310bb76ef5c8ff86917882448ace8ad = L.circle(
+                [-22.86136, -43.33016],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_1310bb76ef5c8ff86917882448ace8ad.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA QUEIROZ<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1febff947f373dea3f1ff21573ba9a0b = L.circle(
+                [-22.952153, -43.37448],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_1febff947f373dea3f1ff21573ba9a0b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA SAPÊ<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_224b19a2aff2dce38c44819c9e5315e7 = L.circle(
+                [-22.86137, -43.33033],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_224b19a2aff2dce38c44819c9e5315e7.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILAR CARIOCA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_10778f38acfea0f6832d89302980553a = L.circle(
+                [-23.00051, -43.33502],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_10778f38acfea0f6832d89302980553a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: AFRÂNIO COSTA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8461e8111ea4c07800c80fd8006fd0f1 = L.circle(
+                [-23.00037, -43.38976],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_8461e8111ea4c07800c80fd8006fd0f1.bindTooltip(
+                `<div>
+                     <li><bold> Estação: AMÉRICAS PARK<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_0a78e60fb3819c0bef8e75cfde259212 = L.circle(
+                [-22.99992, -43.35983],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_0a78e60fb3819c0bef8e75cfde259212.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BARRA SHOPPING - EXPRESSO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_340a88fad6021d8665155474aaac200f = L.circle(
+                [-22.99995, -43.36121],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_340a88fad6021d8665155474aaac200f.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BARRA SHOPPING - PARADOR<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_71466169a6a34ab2001067580fa9b0ff = L.circle(
+                [-23.0003, -43.37744],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_71466169a6a34ab2001067580fa9b0ff.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BOSQUE DA BARRA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_96ab357df6c0360ac21007c1a0f9354c = L.circle(
+                [-23.0033, -43.3239],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_96ab357df6c0360ac21007c1a0f9354c.bindTooltip(
+                `<div>
+                     <li><bold> Estação: BOSQUE MARAPENDI<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c83096e264f34341c85d7902b8fb4a6f = L.circle(
+                [-22.88218, -43.34188],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c83096e264f34341c85d7902b8fb4a6f.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CAMPINHO<li><bold> total: 7<li><bold> avanço:2.0<li><bold> conversão:3.0<li><bold> invasão:2.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_eff59c7e0e25b6bcd18d67a32479f224 = L.circle(
+                [-22.90768, -43.56407],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_eff59c7e0e25b6bcd18d67a32479f224.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CÂNDIDO MAGALHÃES<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_12dc1a2333529d43445843c6d72aff05 = L.circle(
+                [-22.89288, -43.34859],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_12dc1a2333529d43445843c6d72aff05.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CAPITÃO MENEZES<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_49c2871c36eecaca13c355f4384f6417 = L.circle(
+                [-22.97335, -43.36559],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_49c2871c36eecaca13c355f4384f6417.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CENTRO METROPOLITANO<li><bold> total: 3<li><bold> avanço:0.0<li><bold> conversão:3.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4d229547e76caa18734f0fb35e634bb3 = L.circle(
+                [-22.93345, -43.66202],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_4d229547e76caa18734f0fb35e634bb3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CESARÃO II<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_627ae6460295bb7bfa9d828017d9b900 = L.circle(
+                [-22.91597, -43.60776],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_627ae6460295bb7bfa9d828017d9b900.bindTooltip(
+                `<div>
+                     <li><bold> Estação: COSMOS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ec95a4c8d6e1d36df3d1f6d65a1c77ab = L.circle(
+                [-23.0051, -43.55816],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ec95a4c8d6e1d36df3d1f6d65a1c77ab.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CTEX<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e8cb652b83394adb30a54f9772a684b3 = L.circle(
+                [-22.95979, -43.38867],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e8cb652b83394adb30a54f9772a684b3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CURICICA<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e01c925644a4a9fc95b4c15b4282cdf7 = L.circle(
+                [-22.9365, -43.66683],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e01c925644a4a9fc95b4c15b4282cdf7.bindTooltip(
+                `<div>
+                     <li><bold> Estação: CURRAL FALSO<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_846952dd73c0ee00a25808575d66cd30 = L.circle(
+                [-22.94056, -43.37241],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_846952dd73c0ee00a25808575d66cd30.bindTooltip(
+                `<div>
+                     <li><bold> Estação: DIVINA PROVIDÊNCIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_99530225daa201660ed8df8453715038 = L.circle(
+                [-22.99958, -43.58227],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_99530225daa201660ed8df8453715038.bindTooltip(
+                `<div>
+                     <li><bold> Estação: EMBRAPA<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a553cd510a43f8f200f58dbb0a0c6842 = L.circle(
+                [-22.92747, -43.67756],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a553cd510a43f8f200f58dbb0a0c6842.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GASTÃO RANGEL<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f506f186773c09ee5467a06818844763 = L.circle(
+                [-23.00962, -43.44867],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f506f186773c09ee5467a06818844763.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GELSON FONSECA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f2ebb24d71c938227cfb9b281315b7e8 = L.circle(
+                [-23.01214, -43.45843],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f2ebb24d71c938227cfb9b281315b7e8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GLÁUCIO GIL<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fc348a2fbee981d3a3395dece3a3745b = L.circle(
+                [-23.0184, -43.48257],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_fc348a2fbee981d3a3395dece3a3745b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: GUIOMAR NOVAES<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a86c52233296114f3b3e72dd8feb190c = L.circle(
+                [-23.00944, -43.53986],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a86c52233296114f3b3e72dd8feb190c.bindTooltip(
+                `<div>
+                     <li><bold> Estação: ILHA DE GUARATIBA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_441defbd27de7dc5b85d769c21534ba3 = L.circle(
+                [-22.90467, -43.35702],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_441defbd27de7dc5b85d769c21534ba3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: IPASE<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4012f544395fb6db244d3600bac774f4 = L.circle(
+                [-22.8773, -43.33607],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_4012f544395fb6db244d3600bac774f4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MADUREIRA - MANACÉIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ad269ff446037314d470621b09f8c10c = L.circle(
+                [-22.96846, -43.6218],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ad269ff446037314d470621b09f8c10c.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MAGARÇA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c4688cd604783c669f9a887341c6c690 = L.circle(
+                [-22.84154, -43.32335],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c4688cd604783c669f9a887341c6c690.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MARAMBAIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_33ef0692991aba2e46adf028ef27b759 = L.circle(
+                [-22.84682, -43.24316],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_33ef0692991aba2e46adf028ef27b759.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MARÉ<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_29d549fec5ed7dc1746be9db79d6a545 = L.circle(
+                [-22.99412, -43.59611],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_29d549fec5ed7dc1746be9db79d6a545.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MATO ALTO<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4c12498f09299eac83349de03661f682 = L.circle(
+                [-22.8702, -43.335504],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_4c12498f09299eac83349de03661f682.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MERCADÃO<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ac6df5c7da04f76cf6c8317daa7eff95 = L.circle(
+                [-22.93483, -43.37137],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ac6df5c7da04f76cf6c8317daa7eff95.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MERCK<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e3bb51f191aa3204874e7829b40a1487 = L.circle(
+                [-22.96677, -43.39701],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e3bb51f191aa3204874e7829b40a1487.bindTooltip(
+                `<div>
+                     <li><bold> Estação: MINHA PRAIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_72f57565c35b4a0db872c28c466f2153 = L.circle(
+                [-23.02057, -43.50005],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_72f57565c35b4a0db872c28c466f2153.bindTooltip(
+                `<div>
+                     <li><bold> Estação: NOTRE DAME<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_79e0332a45a06a5b730499a71b32d50f = L.circle(
+                [-22.84841, -43.26507],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_79e0332a45a06a5b730499a71b32d50f.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OLARIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d50cef15fb70e6af3b636e5dd14b2c67 = L.circle(
+                [-22.98173, -43.4102],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_d50cef15fb70e6af3b636e5dd14b2c67.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OLOF PALME<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_027612ac2d4545bedaa9819751320345 = L.circle(
+                [-22.86575, -43.33427],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_027612ac2d4545bedaa9819751320345.bindTooltip(
+                `<div>
+                     <li><bold> Estação: OTAVIANO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_432d926bec0851aa85a892da1d9f67d9 = L.circle(
+                [-22.99994, -43.35247],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_432d926bec0851aa85a892da1d9f67d9.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PARQUE DAS ROSAS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_82fd00fd104738e4b865bebec23e943b = L.circle(
+                [-22.97316, -43.39357],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_82fd00fd104738e4b865bebec23e943b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PARQUE OLÍMPICO<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f0f45c353d75c7f4e183b98b6de11962 = L.circle(
+                [-22.83907, -43.28325],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f0f45c353d75c7f4e183b98b6de11962.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PASTOR JOSÉ SANTOS<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9934bdd928cda95f965f1004ab09e132 = L.circle(
+                [-23.00111, -43.32903],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_9934bdd928cda95f965f1004ab09e132.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PAULO MALTA REZENDE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f8950fdf7a307f20b35a9beb576bcfbd = L.circle(
+                [-23.00279, -43.42361],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f8950fdf7a307f20b35a9beb576bcfbd.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRA DE ITAÚNA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4caaac1a59d50338d474a78ddc9608aa = L.circle(
+                [-22.96747, -43.39045],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_4caaac1a59d50338d474a78ddc9608aa.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRO CORREIA<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_89c2a508ace1dd3de32f9b714f382f35 = L.circle(
+                [-22.84127, -43.29843],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_89c2a508ace1dd3de32f9b714f382f35.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PEDRO TAQUES<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c10dc9b2881651a43d74b527ff80d844 = L.circle(
+                [-22.84161, -43.2771],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c10dc9b2881651a43d74b527ff80d844.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PENHA 1<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f65e6a66faad933b2241793ac1de16e4 = L.circle(
+                [-22.84193, -43.27633],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f65e6a66faad933b2241793ac1de16e4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PENHA 2<li><bold> total: 4<li><bold> avanço:0.0<li><bold> conversão:4.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_979c01b8504de7d3f1301e4b84c579c9 = L.circle(
+                [-22.9075, -43.57571],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_979c01b8504de7d3f1301e4b84c579c9.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINA RANGEL<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_cdc5b12c8fae05b8f46fc7b774244ae1 = L.circle(
+                [-22.96468, -43.64737],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_cdc5b12c8fae05b8f46fc7b774244ae1.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINGO D'ÁGUA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b25d0324ec53f94de96179b6b1f847fa = L.circle(
+                [-22.88836, -43.34588],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_b25d0324ec53f94de96179b6b1f847fa.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PINTO TELES<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_79a296ad553f1b134777d9649c8845f4 = L.circle(
+                [-23.00542, -23.00542],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_79a296ad553f1b134777d9649c8845f4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PONTÕES - BARRA SUL<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ab9fbe98cfab02d84bf81dc111e3f4f0 = L.circle(
+                [-22.9586, -43.38343],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ab9fbe98cfab02d84bf81dc111e3f4f0.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA DO BANDOLIM<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_923e9ea2b6d1f681f131699761acb0ba = L.circle(
+                [-22.83876, -43.29496],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_923e9ea2b6d1f681f131699761acb0ba.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA DO CARMO<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4cac81253944f86824d3467e66cce2af = L.circle(
+                [-22.89812, -43.35253],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_4cac81253944f86824d3467e66cce2af.bindTooltip(
+                `<div>
+                     <li><bold> Estação: PRAÇA SECA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8b03311369c4d5da24396baa3c2cc17d = L.circle(
+                [-22.94825, -43.37239],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_8b03311369c4d5da24396baa3c2cc17d.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RECANTO DAS PALMEIRAS<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c1747a53fb4b3ef071795a949640d001 = L.circle(
+                [-22.97315, -43.37662],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c1747a53fb4b3ef071795a949640d001.bindTooltip(
+                `<div>
+                     <li><bold> Estação: REDE SARAH<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e5691f5cfc62baf955109fef60420a25 = L.circle(
+                [-22.97324, -43.38214],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e5691f5cfc62baf955109fef60420a25.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RIO 2<li><bold> total: 3<li><bold> avanço:0.0<li><bold> conversão:3.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ca87ffff70a625bd4587f10c4996c33b = L.circle(
+                [-23.00022, -43.34186],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_ca87ffff70a625bd4587f10c4996c33b.bindTooltip(
+                `<div>
+                     <li><bold> Estação: RIVIERA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e9c4a2e60dfb42cb7b53e57f440f7bcb = L.circle(
+                [-23.00803, -43.44238],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_e9c4a2e60dfb42cb7b53e57f440f7bcb.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SALVADOR ALLENDE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c415fa2dd6ee1779496f63a222359401 = L.circle(
+                [-22.93449, -43.665],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_c415fa2dd6ee1779496f63a222359401.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA CRUZ<li><bold> total: 3<li><bold> avanço:1.0<li><bold> conversão:1.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f1e2d153591187c389cfc1d50baa179a = L.circle(
+                [-22.9365, -43.37175],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_f1e2d153591187c389cfc1d50baa179a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA EFIGÊNIA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6a6db8b7261ab171876e0f38fe1cdb28 = L.circle(
+                [-22.91678, -43.63276],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6a6db8b7261ab171876e0f38fe1cdb28.bindTooltip(
+                `<div>
+                     <li><bold> Estação: SANTA EUGÊNIA<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_960be573a9ed53da844da0e0df0ed674 = L.circle(
+                [-22.91536, -43.36111],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_960be573a9ed53da844da0e0df0ed674.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TANQUE<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_7f7848ab513540b0368d8c4187972330 = L.circle(
+                [-23.00006, -43.42965],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_7f7848ab513540b0368d8c4187972330.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TAPEBUIAS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_28e0a11617a441f43a519b02adf3376d = L.circle(
+                [-22.92362, -43.37358],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_28e0a11617a441f43a519b02adf3376d.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TAQUARA<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a417f902f51708a4032456a097fc276c = L.circle(
+                [-22.97165, -43.4005],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a417f902f51708a4032456a097fc276c.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL CENTRO OLÍMPICO<li><bold> total: 2<li><bold> avanço:0.0<li><bold> conversão:2.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a052e75861655b975a39410aba93cf46 = L.circle(
+                [-22.83916, -43.23939],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_a052e75861655b975a39410aba93cf46.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL FUNDÃO<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6bbf215239d8bffec3bb4dbaf2b510db = L.circle(
+                [-22.87853, -43.33602],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6bbf215239d8bffec3bb4dbaf2b510db.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TERMINAL MADUREIRA - PAULO DA PORTELA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_80dcff20dfdc17df7ab1de1264893ff6 = L.circle(
+                [-22.925483, -43.64996],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_80dcff20dfdc17df7ab1de1264893ff6.bindTooltip(
+                `<div>
+                     <li><bold> Estação: TRÊS PONTES<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2ef7db3a0968d750c862f37a88d45ee3 = L.circle(
+                [-22.85642, -43.32802],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_2ef7db3a0968d750c862f37a88d45ee3.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VAZ LOBO<li><bold> total: 4<li><bold> avanço:1.0<li><bold> conversão:2.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2999a4e261475798afc71afedeef8ac8 = L.circle(
+                [-22.85287, -43.31301],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_2999a4e261475798afc71afedeef8ac8.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VICENTE DE CARVALHO<li><bold> total: 5<li><bold> avanço:1.0<li><bold> conversão:3.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6566a2f3f22d370754daf580906f2ce4 = L.circle(
+                [-22.84965, -43.30795],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6566a2f3f22d370754daf580906f2ce4.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA KOSMOS<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_758e506e513d42f98f8602fc81ce5d6a = L.circle(
+                [-22.9284, -43.65384],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_758e506e513d42f98f8602fc81ce5d6a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA PACIÊNCIA<li><bold> total: 2<li><bold> avanço:1.0<li><bold> conversão:0.0<li><bold> invasão:1.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9da58b4d91142d67fd2054ace2f62b50 = L.circle(
+                [-22.86136, -43.33016],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_9da58b4d91142d67fd2054ace2f62b50.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA QUEIROZ<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6526a2ca5c2431174d9ef75d1949a6b2 = L.circle(
+                [-22.952153, -43.37448],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_6526a2ca5c2431174d9ef75d1949a6b2.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILA SAPÊ<li><bold> total: 1<li><bold> avanço:0.0<li><bold> conversão:1.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_aa3475d26c3fd7ca266c6f969054443a = L.circle(
+                [-22.86137, -43.33033],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": "#00A1B3", "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_127b3629b421381131ffadba0a47458c);
+        
+    
+            circle_aa3475d26c3fd7ca266c6f969054443a.bindTooltip(
+                `<div>
+                     <li><bold> Estação: VILAR CARIOCA<li><bold> total: 0<li><bold> avanço:0.0<li><bold> conversão:0.0<li><bold> invasão:0.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
